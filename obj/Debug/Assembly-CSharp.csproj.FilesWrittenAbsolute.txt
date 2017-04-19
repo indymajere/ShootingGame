@@ -1,0 +1,34 @@
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/obj/Debug/Assembly-CSharp.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/UnityEngine.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/UnityEditor.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Mono.Cecil.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.DataContract.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/indymajere/My Projects/Unity Projects/Space Invader/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/obj/Debug/Assembly-CSharp.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/UnityEngine.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/UnityEditor.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Mono.Cecil.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.DataContract.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/indymajere/MyProjects/Unity Projects/Space Invader/Temp/bin/Debug/Mono.Cecil.Mdb.dll
