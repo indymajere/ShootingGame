@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7CFAA5DB-98F7-74E4-14E9-634ADDE7A4D4}</ProjectGuid>
+    <ProjectGuid>{4C29D328-2221-BEEB-FDBB-E772EA262183}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Bomb.cs" />
      <Compile Include="Assets\BottomSideFunction.cs" />
      <Compile Include="Assets\EnemyLaser.cs" />
      <Compile Include="Assets\Explode.cs" />

@@ -22,6 +22,10 @@ public class Invader : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) //名為col的觸發事件
 	{
+		if (col.tag == "Fireball")
+		{
+			Destroy(gameObject); //消滅物件本身
+		}
 		if (col.tag == "Ship" || col.tag == "Bullet" ) //如果碰撞的標籤是Ship或Bullet
 		{
 			Destroy(col.gameObject); //消滅碰撞的物件

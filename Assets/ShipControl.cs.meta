@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: e076388f0531e44af836ffbfd811733b
-timeCreated: 1492449066
+timeCreated: 1492790902
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - Bullet: {fileID: 150518, guid: 27c75f0f5ef834f5e9a29777ba678d21, type: 2}
+  - Fireball: {fileID: 1595461428285896, guid: 9db5a19eef4bd40fc98c70d4ec4c4b08, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

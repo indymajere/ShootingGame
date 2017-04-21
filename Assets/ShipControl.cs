@@ -13,6 +13,7 @@ public class gDefine {
 
 public class ShipControl : MonoBehaviour {
 	public GameObject Bullet;
+	public GameObject Fireball;
 	public bool IsPressing = false;
 	public bool IsFire = false;
 	public Vector2 pos;
@@ -57,6 +58,17 @@ public class ShipControl : MonoBehaviour {
 			Instantiate(Bullet,pos,gameObject.transform.rotation);
 
 		}
+
+		//按下X則發射火球
+
+		if (Input.GetKeyDown(KeyCode.X))
+		{
+			Vector3 pos = gameObject.transform.position + new Vector3(0,0.6f,0);
+
+			Instantiate(Fireball,pos,gameObject.transform.rotation);
+
+		}
+
 
 		if (Input.acceleration.x > 0) {
 			gameObject.transform.position += new Vector3(0.03f,0,0);
