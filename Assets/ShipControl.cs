@@ -60,7 +60,6 @@ public class ShipControl : MonoBehaviour {
 		}
 
 		//按下X則發射火球
-
 		if (Input.GetKeyDown(KeyCode.X))
 		{
 			Vector3 pos = gameObject.transform.position + new Vector3(0,0.6f,0);
@@ -78,6 +77,13 @@ public class ShipControl : MonoBehaviour {
 			gameObject.transform.position += new Vector3(-0.03f,0,0);
 		}
 
+		if (Input.acceleration.y > 0) {
+			gameObject.transform.position += new Vector3(0,0.03f,0);
+		}
+
+		if (Input.acceleration.y < 0) {
+			gameObject.transform.position += new Vector3(0,-0.03f,0);
+		}
 
 	}
 
@@ -165,8 +171,8 @@ public class ShipControl : MonoBehaviour {
 			
 			if (IsFire == false) 
 			{
-				Vector3 posb = gameObject.transform.position + new Vector3 (0, 0.6f, 0);
-				//Instantiate (Bullet, posb, gameObject.transform.rotation);
+				Vector3 pos = gameObject.transform.position + new Vector3(0,0.6f,0);
+				Instantiate(Fireball,pos,gameObject.transform.rotation);
 				IsFire = true;
 			}
 			gDefine.Direction mDirection = HandDirection(m_screenPos, pos);
