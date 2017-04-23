@@ -59,13 +59,14 @@ public class ShipControl : MonoBehaviour {
 
 		}
 
-		//按下X則發射火球
+		//若分數超過100分，則按下X可發射bomb
 		if (Input.GetKeyDown(KeyCode.X))
 		{
-			Vector3 pos = gameObject.transform.position + new Vector3(0,0.6f,0);
-
-			Instantiate(Fireball,pos,gameObject.transform.rotation);
-
+			if (GameFunction.Instance.ShootBomb() == 1)
+			{
+				Vector3 pos = gameObject.transform.position + new Vector3(0,0.6f,0);
+				Instantiate(Fireball,pos,gameObject.transform.rotation);
+			}
 		}
 
 

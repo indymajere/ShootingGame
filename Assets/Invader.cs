@@ -25,6 +25,8 @@ public class Invader : MonoBehaviour {
 		if (col.tag == "Fireball")
 		{
 			Destroy(gameObject); //消滅物件本身
+			Instantiate(explo,transform.position,transform.rotation); //在外星人的位置產生爆炸
+			GameFunction.Instance.AddScore(); //呼叫GameFunction底下的AddScore()
 		}
 		if (col.tag == "Ship" || col.tag == "Bullet" ) //如果碰撞的標籤是Ship或Bullet
 		{

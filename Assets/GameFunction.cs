@@ -51,7 +51,6 @@ public class GameFunction : MonoBehaviour {
 	}
 
 	public void AddScore()
-
 	{
 
 		Score += 10; //分數+10
@@ -59,6 +58,19 @@ public class GameFunction : MonoBehaviour {
 		ScoreText.text = "Score: " + Score; // 更改ScoreText的內容
 
 	}
+
+	public int ShootBomb()
+	{
+		if (Score >= 100) {
+			Score -= 100; //分數-100
+			ScoreText.text = "Score: " + Score; // 更改ScoreText的內容
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+
+
 
 	public void GameStart() 
 

@@ -31,7 +31,7 @@ public class EnemyLaser : MonoBehaviour {
 				GameFunction.Instance.GameOver(); 
 				//在碰撞物件的位置產生爆炸，也就是在太空船的位置產生爆炸
 			}
-			GameFunction.Instance.AddScore(); //呼叫GameFunction底下的AddScore()
+//			GameFunction.Instance.AddScore(); //呼叫GameFunction底下的AddScore()
 
 		}
 	}
