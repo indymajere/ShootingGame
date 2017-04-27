@@ -13,25 +13,22 @@ public class EnemyLaser : MonoBehaviour {
 		gameObject.transform.position -= new Vector3(0,0.1f,0);
 	}
 
-	void OnTriggerEnter2D(Collider2D col) //名為col的觸發事件
+	void OnTriggerEnter2D(Collider2D col) 
 	{
 		if (col.tag == "Fireball")
 		{
-			Destroy(gameObject); //消滅物件本身
+			Destroy(gameObject); //destroy EnemyLaser
 		}
-		if (col.tag == "Ship" || col.tag == "Bullet" ) //如果碰撞的標籤是Ship或Bullet
+		if (col.tag == "Ship" || col.tag == "Bullet" ) // if invader's laser collided with battleship or battleship's laser
 		{
-			Destroy(col.gameObject); //消滅碰撞的物件
-			Destroy(gameObject); //消滅物件本身
-			//Instantiate(explo,transform.position,transform.rotation); //在外星人的位置產生爆炸
+			Destroy(col.gameObject); //destroy collided object
+			Destroy(gameObject); //destroy invader's laser
 
-			if (col.tag == "Ship") //如果碰撞的標籤是Ship
+			if (col.tag == "Ship") //if collided with battleship
 			{
-				//Instantiate(explo,col.gameObject.transform.position,col.gameObject.transform.rotation);
+				//Instantiate(explo,col.gameObject.transform.position,col.gameObject.transform.rotation);   //battleship explosion
 				GameFunction.Instance.GameOver(); 
-				//在碰撞物件的位置產生爆炸，也就是在太空船的位置產生爆炸
 			}
-//			GameFunction.Instance.AddScore(); //呼叫GameFunction底下的AddScore()
 
 		}
 	}

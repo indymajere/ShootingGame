@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Invader : MonoBehaviour {
-	public GameObject explo; //宣告一個名為explo的物件
+	public GameObject explo; 
 	public int shoot_random = 0; 
 	public GameObject EnemyBullet;
 	// Use this for initialization
@@ -20,27 +20,27 @@ public class Invader : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D col) //名為col的觸發事件
+	void OnTriggerEnter2D(Collider2D col) 
 	{
 		if (col.tag == "Fireball")
 		{
-			Destroy(gameObject); //消滅物件本身
-			Instantiate(explo,transform.position,transform.rotation); //在外星人的位置產生爆炸
-			GameFunction.Instance.AddScore(); //呼叫GameFunction底下的AddScore()
+			Destroy(gameObject); // destroy invader
+			Instantiate(explo,transform.position,transform.rotation); // invader explosion
+			GameFunction.Instance.AddScore(); // add score
 		}
-		if (col.tag == "Ship" || col.tag == "Bullet" ) //如果碰撞的標籤是Ship或Bullet
+		if (col.tag == "Ship" || col.tag == "Bullet" ) // if collided with battleship or battleship laser
 		{
-			Destroy(col.gameObject); //消滅碰撞的物件
-			Destroy(gameObject); //消滅物件本身
-			Instantiate(explo,transform.position,transform.rotation); //在外星人的位置產生爆炸
+			Destroy(col.gameObject); // destroy battleship laser
+			Destroy(gameObject); //destroy invader
+			Instantiate(explo,transform.position,transform.rotation); // invader explosion
 
-			if (col.tag == "Ship") //如果碰撞的標籤是Ship
+			if (col.tag == "Ship") // collided with battleship
 			{
-				Instantiate(explo,col.gameObject.transform.position,col.gameObject.transform.rotation);
-				GameFunction.Instance.GameOver(); 
-				//在碰撞物件的位置產生爆炸，也就是在太空船的位置產生爆炸
+				Instantiate(explo,col.gameObject.transform.position,col.gameObject.transform.rotation); // battleship explosion
+				GameFunction.Instance.GameOver(); // game over
+
 			}
-			GameFunction.Instance.AddScore(); //呼叫GameFunction底下的AddScore()
+			GameFunction.Instance.AddScore(); // add screo
 		}
 	}
 

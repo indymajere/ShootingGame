@@ -13,11 +13,11 @@ public class BottomSideFunction : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter2D(Collider2D col) //碰撞事件
+	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "Enemy" || col.tag == "EBullet") //如果標籤是Emeny
+		if (col.tag == "Enemy" || col.tag == "EBullet") // if collided with invader or invader's laser
 		{
-			Destroy(col.gameObject); //消滅碰撞的物件
+			Destroy(col.gameObject); // destroy collided invader or invader's laser
 		}
 	}
 }

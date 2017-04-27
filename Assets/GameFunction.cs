@@ -1,39 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI; //使用UI
+using UnityEngine.UI; 
 
 public class GameFunction : MonoBehaviour {
-	public GameObject Enemy; //宣告物件，名稱Enemy
-	public float time; //宣告浮點數，名稱time
+	public GameObject Enemy; // invader
+	public float time; 
 
-	public Text ScoreText; //宣告一個ScoreText的text
+	public Text ScoreText; // Score board
 
-	public int Score = 0; // 宣告一整數 Score
+	public int Score = 0; 
 
-	public static GameFunction Instance; // 設定Instance，讓其他程式能讀取GameFunction裡的東西
+	public static GameFunction Instance; 
 
-	public GameObject GameTitle; //宣告GameTitle物件
+	public GameObject GameTitle; // Game Title
 
-	public GameObject GameOverTitle; //宣告GameOverTitle物件
+	public GameObject GameOverTitle; // GameOver Title
 
-	public GameObject PlayButton; //宣告PlayButton物件
+	public GameObject PlayButton; // Play Button
 
-	public bool IsPlaying = false; // 宣告IsPlaying 的布林資料，並設定初始值false
+	public bool IsPlaying = false; 
 
-	public GameObject RestartButton; //宣告RestartButto的物件
+	public GameObject RestartButton; // Restart Button
 
-	public GameObject QuitButton; //宣告QuitButton的物件
+	public GameObject QuitButton; // Quit Button
 
-	public GameObject ShootButton; //20160204
-	public GameObject LeftButton; //20160204
-	public GameObject RightButton; //20160204
+	public GameObject ShootButton; 
+	public GameObject LeftButton; 
+	public GameObject RightButton; 
 	//public GameObject Bullet;
 
 	// Use this for initialization
 	void Start () {
-		Instance = this; //指定Instance這個程式
-		GameOverTitle.SetActive(false); //設定GameOverTitle不顯示(打勾取消)
-		RestartButton.SetActive(false); //RestartButton設定成不顯示
+		Instance = this; 
+		GameOverTitle.SetActive(false); 
+		RestartButton.SetActive(false); 
 		ShootButton.SetActive(false);
 		LeftButton.SetActive(false);
 		RightButton.SetActive(false);
@@ -41,29 +41,29 @@ public class GameFunction : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		time += Time.deltaTime; //時間增加
+		time += Time.deltaTime; // time increaing
 		if(time>0.5f && IsPlaying == true)
 		{
-			Vector3 pos = new Vector3(Random.Range(-2f,2f),4.5f,0); //宣告位置pos，Random.Range(-2.5f,2.5f)代表X是2.5到-2.5之間隨機
-			Instantiate(Enemy,pos,transform.rotation); //產生敵人
-			time = 0f; //時間歸零
+			Vector3 pos = new Vector3(Random.Range(-2f,2f),4.5f,0); // random X pos from -2 to 2 
+			Instantiate(Enemy,pos,transform.rotation); // create invader
+			time = 0f; // time reset to 0
 		}
 	}
 
 	public void AddScore()
 	{
 
-		Score += 10; //分數+10
+		Score += 10; // score increases 10 points
 
-		ScoreText.text = "Score: " + Score; // 更改ScoreText的內容
+		ScoreText.text = "Score: " + Score; // modify the score board
 
 	}
 
 	public int ShootBomb()
 	{
 		if (Score >= 100) {
-			Score -= 100; //分數-100
-			ScoreText.text = "Score: " + Score; // 更改ScoreText的內容
+			Score -= 100; // socre minus 100 points
+			ScoreText.text = "Score: " + Score; // modify the score board
 			return 1;
 		} else {
 			return 0;
@@ -76,13 +76,13 @@ public class GameFunction : MonoBehaviour {
 
 	{
 
-		IsPlaying = true; //設定IsPlaying為true，代表遊戲正在進行中
+		IsPlaying = true; 
 
-		GameTitle.SetActive (false); //不顯示GameTitle
+		GameTitle.SetActive (false); 
 
-		PlayButton.SetActive (false); //不顯示PlayButton
+		PlayButton.SetActive (false); 
 
-		QuitButton.SetActive (false); //QuitButton設定成不顯示
+		QuitButton.SetActive (false); 
 
 		//ShootButton.SetActive(true);
 		//LeftButton.SetActive(true);
@@ -93,32 +93,32 @@ public class GameFunction : MonoBehaviour {
 
 	{
 
-		IsPlaying = false; //IsPlaying設定成false，停止產生外星人
+		IsPlaying = false; // not playing, stop create invader
 
-		GameOverTitle.SetActive(true); //GameOverTitle設定為ture
+		GameOverTitle.SetActive(true); // show GameOverTitle
 
-		RestartButton.SetActive(true); //RestartButton設定成不顯示
+		RestartButton.SetActive(true); // show Restart Button
 
-		QuitButton.SetActive(true); //QuitButton設定成不顯示
+		QuitButton.SetActive(true); // show Quit Button
 
 		ShootButton.SetActive(false);
 		LeftButton.SetActive(false);
 		RightButton.SetActive(false);
 	}
 
-	public void ResetGame() //RestartButton的功能
+	public void ResetGame() // Function of Restart Button
 
 	{
 
-		Application.LoadLevel (Application.loadedLevel); //讀取關卡(已讀取的關卡)
+		Application.LoadLevel (Application.loadedLevel); 
 
 	}
 
-	public void QuitGame() //QuitButton的功能
+	public void QuitGame() // Function of Quit Button
 
 	{
 
-		Application.Quit(); //離開應用程式
+		Application.Quit(); // Quit the game
 
 	}
 

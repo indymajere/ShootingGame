@@ -30,36 +30,35 @@ public class ShipControl : MonoBehaviour {
 	void Update () {
 
 		#if UNITY_EDITOR || UNITY_STANDALONE
-		MouseInput(); // 滑鼠偵測
+		MouseInput (); // Detect mouse
 		#elif UNITY_ANDROID
-		MobileInput(); // 觸碰偵測
+		MobileInput(); // Detect touch
 		#endif
 
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			gameObject.transform.position += new Vector3(0.1f,0,0);
+			gameObject.transform.position += new Vector3 (0.1f, 0, 0);
 		}
 
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			gameObject.transform.position += new Vector3(-0.1f,0,0);
+			gameObject.transform.position += new Vector3 (-0.1f, 0, 0);
 		}
 
 		if (Input.GetKey (KeyCode.UpArrow)) {
-			gameObject.transform.position += new Vector3(0,0.1f,0);
+			gameObject.transform.position += new Vector3 (0, 0.1f, 0);
 		}
 
 		if (Input.GetKey (KeyCode.DownArrow)) {
-			gameObject.transform.position += new Vector3(0,-0.1f,0);
+			gameObject.transform.position += new Vector3 (0, -0.1f, 0);
 		}
 
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			Vector3 pos = gameObject.transform.position + new Vector3(0,0.6f,0);
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			Vector3 pos = gameObject.transform.position + new Vector3 (0, 0.6f, 0);
 
-			Instantiate(Bullet,pos,gameObject.transform.rotation);
+			Instantiate (Bullet, pos, gameObject.transform.rotation);
 
 		}
 
-		//若分數超過100分，則按下X可發射bomb
+		// if score is above 100, you can press 'x' to fire bomb 
 		if (Input.GetKeyDown(KeyCode.X))
 		{
 			if (GameFunction.Instance.ShootBomb() == 1)
@@ -128,7 +127,7 @@ public class ShipControl : MonoBehaviour {
 		if (Input.touchCount <= 0)
 			return;
 
-		//1個手指觸碰螢幕
+		//1 finger touch screen
 		if (Input.touchCount == 1) {
 
 			//IsFire = false;
@@ -136,26 +135,26 @@ public class ShipControl : MonoBehaviour {
 				ShootBullet ();
 			}
 
-			//開始觸碰
+			// touch start
 			if (Input.touches [0].phase == TouchPhase.Began) {
 				Debug.Log("Began");
-				//紀錄觸碰位置
+				// record touch position
 				m_screenPos = Input.touches [0].position;
 
 				IsPressing = true;
-				//手指移動
+				// finger movement
 			} else if (Input.touches [0].phase == TouchPhase.Moved) {
 				Debug.Log("Moved");
 				pos = Input.touches [0].position;
 
 				gDefine.Direction mDirection = HandDirection(m_screenPos, pos);
-				//移動攝影機
+				// Camera movement
 				//Camera.main.transform.Translate (new Vector3 (-Input.touches [0].deltaPosition.x * Time.deltaTime, -Input.touches [0].deltaPosition.y * Time.deltaTime, 0));
 			} else if (IsPressing == true) {
 					gDefine.Direction mDirection = HandDirection(m_screenPos, pos);
 			}
 
-			//手指離開螢幕
+			// touch end
 			if (Input.touches [0].phase == TouchPhase.Ended || Input.touches [0].phase == TouchPhase.Canceled) {
 				Debug.Log("Ended");
 				IsPressing = false;
@@ -165,7 +164,6 @@ public class ShipControl : MonoBehaviour {
 				//gDefine.Direction mDirection = HandDirection(m_screenPos, pos);
 				//Debug.Log("mDirection: " + mDirection.ToString());
 			}
-			//攝影機縮放，如果1個手指以上觸碰螢幕
 
 
 		} else if (Input.touchCount > 1) {
@@ -177,56 +175,9 @@ public class ShipControl : MonoBehaviour {
 				IsFire = true;
 			}
 			gDefine.Direction mDirection = HandDirection(m_screenPos, pos);
-			/*
-			//記錄兩個手指位置
-			Vector2 finger1 = new Vector2 ();
-			Vector2 finger2 = new Vector2 ();
 
-			//記錄兩個手指移動距離
-			Vector2 move1 = new Vector2 ();
-			Vector2 move2 = new Vector2 ();
-
-			//是否是小於2點觸碰
-			for (int i=0; i<2; i++) {
-				UnityEngine.Touch touch = UnityEngine.Input.touches [i];
-
-				if (touch.phase == TouchPhase.Ended)
-					break;
-
-				if (touch.phase == TouchPhase.Moved) {
-					//每次都重置
-					float move = 0;
-
-					//觸碰一點
-					if (i == 0) {
-						finger1 = touch.position;
-						move1 = touch.deltaPosition;
-						//另一點
-					} else {
-						finger2 = touch.position;
-						move2 = touch.deltaPosition;
-
-						//取最大X
-						if (finger1.x > finger2.x) {
-							move = move1.x;
-						} else {
-							move = move2.x;
-						}
-
-						//取最大Y，並與取出的X累加
-						if (finger1.y > finger2.y) {
-							move += move1.y;
-						} else {
-							move += move2.y;
-						}
-
-						//當兩指距離越遠，Z位置加的越多，相反之
-						Camera.main.transform.Translate (0, 0, move * Time.deltaTime);
-					}
-				}
-			}//end for   */
-		}//end else if   
-	}//end void
+		}
+	}
 
 
 
@@ -236,25 +187,25 @@ public class ShipControl : MonoBehaviour {
 		
 		gDefine.Direction mDirection;
 
-		//手指水平移動
+		// horizontal movement
 		if (Mathf.Abs (StartPos.x - EndPos.x) > Mathf.Abs (StartPos.y - EndPos.y)) {
 			if (StartPos.x > EndPos.x) {
-				//手指向左滑動
+				// move left
 				mDirection = gDefine.Direction.Left;
 				//gameObject.transform.position += new Vector3(-0.05f,0,0);
 			} else {
-				//手指向右滑動
+				//  move right
 				mDirection = gDefine.Direction.Right;
 				//gameObject.transform.position += new Vector3(0.05f,0,0);
 
 			}
 		} else {
 		if (m_screenPos.y > EndPos.y) {
-				//手指向下滑動
+				// move down
 				mDirection = gDefine.Direction.Down;
 				//gameObject.transform.position += new Vector3(0,-0.05f,0);
 			} else {
-				//手指向上滑動
+				// move up
 				mDirection = gDefine.Direction.Up;
 				//gameObject.transform.position += new Vector3(0,0.05f,0);
 			}

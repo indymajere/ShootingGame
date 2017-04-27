@@ -15,6 +15,6 @@ public class Explode : MonoBehaviour {
 
 	void AnimationEnd() 
 	{
-		Destroy (gameObject); //消滅物件
+		Destroy (gameObject); // destroy explosion object
 	}
 }
