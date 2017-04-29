@@ -9,6 +9,7 @@ public class GameFunction : MonoBehaviour {
 	public Text ScoreText; // Score board
 
 	public int Score = 0; 
+	public int BattleshipLife = 30;
 
 	public static GameFunction Instance; 
 
@@ -58,6 +59,19 @@ public class GameFunction : MonoBehaviour {
 		ScoreText.text = "Score: " + Score; // modify the score board
 
 	}
+
+	// Battleship be hit
+	public int BattleshipDamage(int damage)
+	{
+		
+		BattleshipLife -= damage;
+		return BattleshipLife;
+//		if (BattleshipLife <= 0) // Battleship be destoyed
+//		{
+//			GameFunction.Instance.GameOver();
+//		}
+	}	
+
 
 	public int ShootBomb()
 	{

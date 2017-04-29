@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class EnemyLaser : MonoBehaviour {
-
 	// Use this for initialization
 	void Start () {
 	
@@ -21,13 +20,20 @@ public class EnemyLaser : MonoBehaviour {
 		}
 		if (col.tag == "Ship" || col.tag == "Bullet" ) // if invader's laser collided with battleship or battleship's laser
 		{
-			Destroy(col.gameObject); //destroy collided object
+			
 			Destroy(gameObject); //destroy invader's laser
 
-			if (col.tag == "Ship") //if collided with battleship
-			{
-				//Instantiate(explo,col.gameObject.transform.position,col.gameObject.transform.rotation);   //battleship explosion
-				GameFunction.Instance.GameOver(); 
+			if (col.tag == "Ship") { //if collided with battleship
+				
+//				Instantiate(Invader.Instance.explo,col.gameObject.transform.position,col.gameObject.transform.rotation);   //battleship explosion				
+
+				if (GameFunction.Instance.BattleshipDamage(10)  <= 0) {
+					Destroy (col.gameObject); //destroy collided object
+					GameFunction.Instance.GameOver (); 					
+				}
+
+			} else {
+				Destroy(col.gameObject); //destroy collided object
 			}
 
 		}

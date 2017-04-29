@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Invader : MonoBehaviour {
+//	public static Invader Instance; 
 	public GameObject explo; 
 	public int shoot_random = 0; 
 	public GameObject EnemyBullet;
