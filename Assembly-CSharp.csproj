@@ -48,12 +48,14 @@
   <ItemGroup>
      <Compile Include="Assets\Bomb.cs" />
      <Compile Include="Assets\BottomSideFunction.cs" />
+     <Compile Include="Assets\EnemyBomb.cs" />
      <Compile Include="Assets\EnemyLaser.cs" />
      <Compile Include="Assets\Explode.cs" />
      <Compile Include="Assets\GameFunction.cs" />
      <Compile Include="Assets\Invader.cs" />
      <Compile Include="Assets\Laser.cs" />
      <Compile Include="Assets\ShipControl.cs" />
+     <Compile Include="Assets\Stage1_boss.cs" />
      <Compile Include="Assets\TopSideFunction.cs" />
      <None Include="Assets\8-Bit_Action_Free\Readme.txt" />
  <Reference Include="UnityEngine.UI">

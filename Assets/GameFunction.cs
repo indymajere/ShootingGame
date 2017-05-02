@@ -4,12 +4,14 @@ using UnityEngine.UI;
 
 public class GameFunction : MonoBehaviour {
 	public GameObject Enemy; // invader
+	public GameObject Boss1; // stage 1 boss
 	public float time; 
 
 	public Text ScoreText; // Score board
 
 	public int Score = 0; 
 	public int BattleshipLife = 30;
+	public int enemyship_number = 0;
 
 	public static GameFunction Instance; 
 
@@ -45,8 +47,18 @@ public class GameFunction : MonoBehaviour {
 		time += Time.deltaTime; // time increaing
 		if(time>0.5f && IsPlaying == true)
 		{
-			Vector3 pos = new Vector3(Random.Range(-2f,2f),4.5f,0); // random X pos from -2 to 2 
-			Instantiate(Enemy,pos,transform.rotation); // create invader
+			if (enemyship_number < 20) {
+				Vector3 pos = new Vector3 (Random.Range (-2f, 2f), 4.5f, 0); // random X pos from -2 to 2 
+				Instantiate (Enemy, pos, transform.rotation); // create invader
+				enemyship_number += 1;
+			} else if (enemyship_number == 20) {
+				Vector3 pos = new Vector3 (Random.Range (-2f, 2f), 3.3f, 0); // random X pos from -2 to 2 
+				Instantiate (Boss1, pos, transform.rotation); // create boss1
+				enemyship_number += 1;
+			} else {
+//				do nothing
+			}
+
 			time = 0f; // time reset to 0
 		}
 	}

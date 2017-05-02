@@ -41,7 +41,7 @@ public class Invader : MonoBehaviour {
 				GameFunction.Instance.GameOver(); // game over
 
 			}
-			GameFunction.Instance.AddScore(); // add screo
+			GameFunction.Instance.AddScore(); // add score
 		}
 	}
 

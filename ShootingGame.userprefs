@@ -1,16 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ShipControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Stage1_boss.cs">
     <Files>
+      <File FileName="Assets/GameFunction.cs" Line="14" Column="29" />
       <File FileName="Assets/ShipControl.cs" Line="107" Column="2" />
-      <File FileName="Assets/Bomb.cs" Line="1" Column="1" />
       <File FileName="Assets/Laser.cs" Line="1" Column="1" />
-      <File FileName="Assets/Invader.cs" Line="5" Column="36" />
+      <File FileName="Assets/Invader.cs" Line="14" Column="36" />
       <File FileName="Assets/BottomSideFunction.cs" Line="18" Column="91" />
       <File FileName="Assets/TopSideFunction.cs" Line="1" Column="1" />
-      <File FileName="Assets/EnemyLaser.cs" Line="28" Column="31" />
-      <File FileName="Assets/Explode.cs" Line="18" Column="52" />
-      <File FileName="Assets/GameFunction.cs" Line="14" Column="1" />
+      <File FileName="Assets/EnemyLaser.cs" Line="30" Column="31" />
+      <File FileName="Assets/Explode.cs" Line="1" Column="1" />
+      <File FileName="Assets/Stage1_boss.cs" Line="66" Column="47" />
+      <File FileName="Assets/EnemyBomb.cs" Line="23" Column="45" />
+      <File FileName="Assets/Bomb.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
