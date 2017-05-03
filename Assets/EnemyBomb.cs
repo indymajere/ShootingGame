@@ -21,7 +21,7 @@ public class EnemyBomb : MonoBehaviour {
 			Destroy(col.gameObject); 
 		} else if (col.tag == "Ship") { 
 			Destroy (gameObject); //destroy EnemyBomb
-			if (GameFunction.Instance.BattleshipDamage (20) <= 0) {
+			if (GameFunction.Instance.BattleshipDamage (30) <= 0) {
 				Destroy (col.gameObject); //destroy collided object
 				GameFunction.Instance.GameOver (); 					
 			}

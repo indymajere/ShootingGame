@@ -8,7 +8,7 @@ public class Stage1_boss : MonoBehaviour {
 	private int shoot_random = 0; 
 	public GameObject EnemyBullet;
 	public GameObject Fireball;
-	private int boss1_life = 100;
+	private int boss1_life = 250;
 	private int i = 0;
 	private int boss_move_time = 50;
 	// Use this for initialization
@@ -21,16 +21,16 @@ public class Stage1_boss : MonoBehaviour {
 
 
 		shoot_random = Random.Range (1, 999);
-		if (shoot_random > 993) {
+		if (shoot_random > 990) {
 			Vector3 posb = gameObject.transform.position - new Vector3 (0, 1.0f, 0);
 			Instantiate (Fireball, posb, gameObject.transform.rotation);
 		} else if (shoot_random > 900) {
-			Vector3 posb = gameObject.transform.position - new Vector3 (0, 0.8f, 0);
-			Instantiate (EnemyBullet, posb, gameObject.transform.rotation);
+			Vector3 posb = gameObject.transform.position - new Vector3 (Random.Range (-0.5f, 0.5f), 0.8f, 0);
+			Instantiate (EnemyBullet, posb , gameObject.transform.rotation);
 		}
 		i += 1;
 		if (i >= boss_move_time) {
-			gameObject.transform.position = new Vector3(Random.Range (-2f, 2f),3.3f,0);
+			gameObject.transform.position = new Vector3(Random.Range (-1.1f, 1.1f),3.3f,0);
 			boss_move_time = Random.Range (25, 150);
 			i = 0;
 		}

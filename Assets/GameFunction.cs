@@ -10,7 +10,7 @@ public class GameFunction : MonoBehaviour {
 	public Text ScoreText; // Score board
 
 	public int Score = 0; 
-	public int BattleshipLife = 30;
+	public int BattleshipLife = 50;
 	public int enemyship_number = 0;
 
 	public static GameFunction Instance; 
@@ -47,16 +47,18 @@ public class GameFunction : MonoBehaviour {
 		time += Time.deltaTime; // time increaing
 		if(time>0.5f && IsPlaying == true)
 		{
-			if (enemyship_number < 20) {
+			if (enemyship_number < 50) {
 				Vector3 pos = new Vector3 (Random.Range (-2f, 2f), 4.5f, 0); // random X pos from -2 to 2 
 				Instantiate (Enemy, pos, transform.rotation); // create invader
 				enemyship_number += 1;
-			} else if (enemyship_number == 20) {
+			} else if (enemyship_number == 50) {
 				Vector3 pos = new Vector3 (Random.Range (-2f, 2f), 3.3f, 0); // random X pos from -2 to 2 
 				Instantiate (Boss1, pos, transform.rotation); // create boss1
 				enemyship_number += 1;
 			} else {
-//				do nothing
+//				Vector3 pos = new Vector3 (Random.Range (-2f, 2f), 3.0f, 0); // random X pos from -2 to 2 
+//				Instantiate (Enemy, pos, transform.rotation); // create invader
+//				enemyship_number += 1;
 			}
 
 			time = 0f; // time reset to 0
