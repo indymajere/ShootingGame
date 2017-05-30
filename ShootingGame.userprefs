@@ -1,18 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Stage1_boss.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/meteo.cs">
     <Files>
-      <File FileName="Assets/GameFunction.cs" Line="14" Column="29" />
-      <File FileName="Assets/ShipControl.cs" Line="107" Column="2" />
-      <File FileName="Assets/Laser.cs" Line="1" Column="1" />
-      <File FileName="Assets/Invader.cs" Line="14" Column="36" />
-      <File FileName="Assets/BottomSideFunction.cs" Line="18" Column="91" />
+      <File FileName="Assets/meteo.cs" Line="57" Column="18" />
+      <File FileName="Assets/GameFunction.cs" Line="55" Column="65" />
+      <File FileName="Assets/Invader.cs" Line="30" Column="10" />
+      <File FileName="Assets/ShipControl.cs" Line="107" Column="1" />
+      <File FileName="Assets/Laser.cs" Line="7" Column="21" />
+      <File FileName="Assets/BottomSideFunction.cs" Line="18" Column="105" />
       <File FileName="Assets/TopSideFunction.cs" Line="1" Column="1" />
-      <File FileName="Assets/EnemyLaser.cs" Line="30" Column="31" />
+      <File FileName="Assets/EnemyLaser.cs" Line="1" Column="1" />
       <File FileName="Assets/Explode.cs" Line="1" Column="1" />
-      <File FileName="Assets/Stage1_boss.cs" Line="66" Column="47" />
-      <File FileName="Assets/EnemyBomb.cs" Line="23" Column="45" />
-      <File FileName="Assets/Bomb.cs" Line="17" Column="1" />
+      <File FileName="Assets/Stage1_boss.cs" Line="11" Column="27" />
+      <File FileName="Assets/EnemyBomb.cs" Line="1" Column="1" />
+      <File FileName="Assets/Bomb.cs" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

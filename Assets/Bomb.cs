@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour {
 
+	public static Bomb Instance; 
+	public int bomb_damage = 30;
 	// Use this for initialization
 	void Start () {
-		
+		Instance = this;
 	}
 	
 	// Update is called once per frame

@@ -1,11 +1,14 @@
 fileFormatVersion: 2
 guid: ed1bb4fe5c78b49a284666adda98cdf4
-timeCreated: 1492447813
+timeCreated: 1495817989
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - Enemy: {fileID: 1914169313509880, guid: cb7c8eac57a3b4f2f90206c858416025, type: 2}
+  - Boss1: {instanceID: 0}
+  - meteorites: {fileID: 1281620678368652, guid: c44ae0507011c41cbb03974e6f05b20e,
+      type: 2}
   - ScoreText: {instanceID: 0}
   - GameTitle: {instanceID: 0}
   - GameOverTitle: {instanceID: 0}

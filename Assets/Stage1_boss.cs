@@ -8,7 +8,7 @@ public class Stage1_boss : MonoBehaviour {
 	private int shoot_random = 0; 
 	public GameObject EnemyBullet;
 	public GameObject Fireball;
-	private int boss1_life = 250;
+	private int boss1_life = 100;
 	private int i = 0;
 	private int boss_move_time = 50;
 	// Use this for initialization
@@ -21,10 +21,10 @@ public class Stage1_boss : MonoBehaviour {
 
 
 		shoot_random = Random.Range (1, 999);
-		if (shoot_random > 990) {
+		if (shoot_random > 995) {
 			Vector3 posb = gameObject.transform.position - new Vector3 (0, 1.0f, 0);
 			Instantiate (Fireball, posb, gameObject.transform.rotation);
-		} else if (shoot_random > 900) {
+		} else if (shoot_random > 950) {
 			Vector3 posb = gameObject.transform.position - new Vector3 (Random.Range (-0.5f, 0.5f), 0.8f, 0);
 			Instantiate (EnemyBullet, posb , gameObject.transform.rotation);
 		}
@@ -43,7 +43,7 @@ public class Stage1_boss : MonoBehaviour {
 		Destroy(col.gameObject); 
 		if (col.tag == "Fireball")
 		{
-			Boss1_Life_Count (30);
+			Boss1_Life_Count (Bomb.Instance.bomb_damage);
 		}
 		if (col.tag == "Ship" || col.tag == "Bullet" ) // if collided with battleship or battleship laser
 		{
@@ -63,7 +63,7 @@ public class Stage1_boss : MonoBehaviour {
 		{
 			Destroy(gameObject); // destroy boss
 			Instantiate(explo,transform.position,transform.rotation); // boss explosion
-			GameFunction.Instance.enemyship_number = 0;
+//			GameFunction.Instance.enemyship_number = 0;
 
 		}
 	}

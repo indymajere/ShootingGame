@@ -57,6 +57,7 @@
      <Compile Include="Assets\ShipControl.cs" />
      <Compile Include="Assets\Stage1_boss.cs" />
      <Compile Include="Assets\TopSideFunction.cs" />
+     <Compile Include="Assets\meteo.cs" />
      <None Include="Assets\8-Bit_Action_Free\Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

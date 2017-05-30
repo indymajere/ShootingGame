@@ -5,12 +5,13 @@ using UnityEngine.UI;
 public class GameFunction : MonoBehaviour {
 	public GameObject Enemy; // invader
 	public GameObject Boss1; // stage 1 boss
+	public GameObject meteorites;
 	public float time; 
 
 	public Text ScoreText; // Score board
 
 	public int Score = 0; 
-	public int BattleshipLife = 50;
+	public int BattleshipLife = 30;
 	public int enemyship_number = 0;
 
 	public static GameFunction Instance; 
@@ -49,16 +50,16 @@ public class GameFunction : MonoBehaviour {
 		{
 			if (enemyship_number < 50) {
 				Vector3 pos = new Vector3 (Random.Range (-2f, 2f), 4.5f, 0); // random X pos from -2 to 2 
-				Instantiate (Enemy, pos, transform.rotation); // create invader
+				Instantiate (meteorites, pos, transform.rotation); // create invader
 				enemyship_number += 1;
-			} else if (enemyship_number == 50) {
+			} else if ((enemyship_number == 50) || (enemyship_number == 100)) {
 				Vector3 pos = new Vector3 (Random.Range (-2f, 2f), 3.3f, 0); // random X pos from -2 to 2 
 				Instantiate (Boss1, pos, transform.rotation); // create boss1
 				enemyship_number += 1;
 			} else {
-//				Vector3 pos = new Vector3 (Random.Range (-2f, 2f), 3.0f, 0); // random X pos from -2 to 2 
-//				Instantiate (Enemy, pos, transform.rotation); // create invader
-//				enemyship_number += 1;
+				Vector3 pos = new Vector3 (Random.Range (-2f, 2f), 4.5f, 0); // random X pos from -2 to 2 
+				Instantiate (Enemy, pos, transform.rotation); // create meteorite
+				enemyship_number += 1;
 			}
 
 			time = 0f; // time reset to 0

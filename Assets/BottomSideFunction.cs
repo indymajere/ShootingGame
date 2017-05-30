@@ -15,7 +15,7 @@ public class BottomSideFunction : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "Enemy" || col.tag == "EBullet") // if collided with invader or invader's laser
+		if (col.tag == "Enemy" || col.tag == "EBullet" || col.tag == "meteorites" || col.tag == "EnemyFireball") // if collided with invader or invader's laser
 		{
 			Destroy(col.gameObject); // destroy collided invader or invader's laser
 		}

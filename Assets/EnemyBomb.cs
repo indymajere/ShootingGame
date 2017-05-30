@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBomb : MonoBehaviour {
 
+	public int enemy_bomb_damage = 30;
 	// Use this for initialization
 	void Start () {
 
@@ -21,7 +22,7 @@ public class EnemyBomb : MonoBehaviour {
 			Destroy(col.gameObject); 
 		} else if (col.tag == "Ship") { 
 			Destroy (gameObject); //destroy EnemyBomb
-			if (GameFunction.Instance.BattleshipDamage (30) <= 0) {
+			if (GameFunction.Instance.BattleshipDamage (enemy_bomb_damage) <= 0) {
 				Destroy (col.gameObject); //destroy collided object
 				GameFunction.Instance.GameOver (); 					
 			}
